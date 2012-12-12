@@ -1,0 +1,24 @@
+#VRML V2.0 utf8
+Background {
+	frontUrl "01.gif"    #前面   
+	backUrl "03.gif"     #后面
+	leftUrl "04.gif"     #左面
+	rightUrl "02.gif"    #右面
+	topUrl "p005.jpg"       #顶部
+	bottomUrl "p006.jpg"	#底部
+}
+Group {
+	children [
+	Anchor {                   #锚节点
+		children [
+		Shape {
+			geometry Box {
+				size 0.1 0.1 0.25
+			}
+
+		}]
+			description "to back"
+			url "quanjing.wrl"
+		} ]	}
+
+

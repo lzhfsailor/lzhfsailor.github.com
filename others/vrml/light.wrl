@@ -1,0 +1,95 @@
+#VRML V2.0 utf8
+#使装饰灯变色
+Background {
+			skyColor 0.2 0.8 1.0
+		}
+DEF  waylamp Group {
+	children[
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.5 0.5 0.7
+					ambientIntensity 0.4
+					specularColor 0.8 0.8 0.9
+					shininess 0.2
+				}
+			}
+			geometry Cylinder {                           #灯柱
+				radius 0.3
+				height 10
+			}
+		}
+		Transform {
+			translation	0.0 4.2 0.0
+			children [
+				Shape {
+					appearance Appearance {
+						material DEF lamp Material {
+							diffuseColor 1.0 1.0 1.0
+						}
+					}
+					geometry Sphere	{              #灯头
+						radius 1.0
+					}
+				}
+			]
+		}
+	  	 ]
+ }
+
+	Transform {
+			translation	0 0 30
+	        children USE waylamp
+	       }
+	Transform {
+			translation	0 0 20
+	        children USE waylamp
+	       }
+	Transform {
+			translation	0 0 10
+	        children USE waylamp
+	       }
+	Transform {
+			translation	0 0 0
+	        children USE waylamp
+	       }
+
+	Transform {
+			translation	0 0 -10
+	        children USE waylamp
+	       }
+	Transform {
+			translation	0 0 -20
+	        children USE waylamp
+	       }
+	Transform {
+			translation	0 0 -30
+	        children USE waylamp
+	       }
+
+		DEF	Time TimeSensor	{                    #时间传感器
+			cycleInterval 6.0
+			loop TRUE
+		}
+	
+		 DEF lightcolor ColorInterpolator {          #颜色插补器
+			 key [                               #相对时间间隔值
+				 0.1
+				 0.2 
+				 0.5 
+				 0.6
+				 0.8 
+				 1.0
+			 ]
+			 keyValue [                          #颜色变换值
+				 0.0 0.0 1.0
+				 0.0 1.0 0.0
+				 1.0 0.0 0.0
+				 1.0 1.0 0.0
+				 0.0 1.0 1.0
+				 1.0 0.0 1.0
+			 ]
+		 }
+
+ROUTE Time.fraction_changed	TO lightcolor.set_fraction
+ROUTE lightcolor.value_changed TO lamp.set_diffuseColor

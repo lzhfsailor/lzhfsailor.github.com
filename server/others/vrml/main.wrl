@@ -1,0 +1,146 @@
+#VRML V2.0 utf8
+Group
+{
+  children
+  [
+    Background
+    {
+      skyColor 0.2 0.8 1.0
+    },
+	Fog
+	{
+	  color	1.0 1.0 1.0
+	  fogType "LINEAR"
+	  visibilityRange 50.0
+	},
+    Shape
+    {
+      appearance Appearance
+      {
+        material Material
+        {
+        	diffuseColor .28 .42 .6
+			specularColor .32 .4 .4
+			ambientIntensity .05
+			emissiveColor .14 .22 .31
+			shininess .54
+        }
+      }
+      geometry Box
+      {
+        size 50.0 0.05 100.0
+      }
+    },
+  
+	Transform#back
+	{
+		translation	0.0 0.05 -30.8
+		children
+		Shape
+		{
+			appearance DEF app Appearance
+			{
+				material Material
+				{
+					diffuseColor 0.6 0.6 0.6
+					emissiveColor 0.3 0.3 0.3
+				}
+			}
+			geometry Box
+			{
+				size 32.0 0.05 16.0
+			}
+		}
+	},
+	Transform#	middle row
+	{
+		translation	0.0 0.05 28.0
+		children
+		Shape
+		{
+			appearance USE app
+			geometry Box
+			{
+				size 50.0 0.05 3.4
+			}
+		}
+	},
+	Transform#front
+	{
+		translation	0.0 0.05 36.4
+		children
+		Shape
+		{
+			appearance USE app
+			geometry Box
+			{
+				size 3.4 0.05 57.2
+			}
+		}
+	},
+	Transform#front row
+	{
+		translation	0.0 0.05 38.0
+		children
+		Shape
+		{
+			appearance USE app
+			geometry Box
+			{
+				size 50.0 0.05 3.4
+			}
+		}
+	},
+	Transform
+	{
+		translation	0.0 0.0 30.0
+		scale 1.0 1.0 1.0
+		children
+		Inline
+		{
+			url	"ujn.wrl"
+		}
+	},
+	Transform
+	{
+		translation	-20.0 5.0 0.0
+		scale 1.0 1.0 1.0
+		children
+		Inline
+		{
+			url	"light.wrl"
+		}
+	},
+	Transform
+	{
+		translation	20.0 5.0 0.0
+		scale 1.0 1.0 1.0
+		children
+		Inline
+		{
+			url	"light.wrl"
+		}
+	},
+	Transform
+	{
+		translation	0.0 15.0 15.0
+		scale 1.0 1.0 1.0
+		children
+		Inline
+		{
+			url	"logo.wrl"
+		}
+	},
+
+    Viewpoint
+    {
+      position 0.0 10.0 55.0
+      orientation 1.0 0.0 0.0 -0.174
+      description "nomal"
+      jump FALSE
+    },
+    
+	
+  ]
+}
+
