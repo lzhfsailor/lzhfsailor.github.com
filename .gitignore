@@ -1,4 +1,5 @@
-_drafts/
-_site/
-.DS_Store
-*.swp
+_site/**
+
+**.sw?
+
+o-rdoc/**
