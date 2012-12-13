@@ -1,27 +1,27 @@
 ---
 layout: nil
-author: saberma
-email: mahb45@gmail.com
-domain: saberma.me
 ---
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{page.author}}的博客</title>
-  <link href="http://{{page.domain}}/atom.xml" rel="self"/>
-  <link href="http://{{page.domain}}/"/>
+
+  <title><![CDATA[{{ site.title }}]]></title>
+  <link href="/atom.xml" rel="self"/>
+  <link href="/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://{{page.domain}}/</id>
+  <id>{{ site.url }}</id>
   <author>
-    <name>{{page.author}}</name>
-    <email>{{page.email}}</email>
+    <name><![CDATA[{{ site.author | strip_html }}]]></name>
+    {% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
   </author>
-  {% for post in site.posts %}
-    <entry>
-      <title>{{ post.title }}</title>
-      <link href="http://{{ page.domain }}{{ post.url }}"/>
-      <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <id>http://{{ page.domain }}{{ post.id }}</id>
-      <content type="html">{{ post.content | xml_escape }}</content>
-    </entry>
+  <generator uri="http://shawhu.org/">jekyll</generator>
+
+  {% for post in site.posts limit: 20 %}
+  <entry>
+    <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
+    <link href="{{ post.url }}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>{{ post.id }}</id>
+    <content type="html"><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></content>
+  </entry>
   {% endfor %}
 </feed>
