@@ -13,7 +13,7 @@ layout: nil
     <name><![CDATA[{{ site.author | strip_html }}]]></name>
     {% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
   </author>
-  <generator uri="http://shawhu.org/">jekyll</generator>
+  <generator uri="http://www.worldhello.tk/">jekyll</generator>
 
   {% for post in site.posts limit: 20 %}
   <entry>
