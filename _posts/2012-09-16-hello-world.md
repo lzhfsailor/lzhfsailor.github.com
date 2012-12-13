@@ -2,8 +2,8 @@
 layout: post
 title: Hello World
 description: 使用Jekyll系统搭建个人博客，记录点点滴滴。
-categories: Life
-tags: life jekyll
+categories: signifox
+tags: signifox
 ---
 
 ### 一.Hello World

@@ -2,8 +2,8 @@
 layout: post
 title: const的毛病
 description: const是c++中一个比较让人疑惑的概念，特此总结一些。
-categories: Programming
-tags: c/cpp
+categories: signifox
+tags: signifox
 ---
 
 ###1.C++在参数及函数名相同的情况下，const可以构成函数重载。

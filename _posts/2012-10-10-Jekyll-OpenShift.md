@@ -2,8 +2,8 @@
 layout: post
 title: Jekyll On OpenShift
 description: 使用Openshift的DIY模式搭建自动化的Jelyll平台，使用私有git仓库和jekyll的plugin功能，秒杀github。（openshift升级造成某些环境变量不可用，请自行修改）
-categories: Method
-tags: jekyll openshift
+categories: signifox
+tags: signifox
 ---
 
 ###1.创建Openshift应用

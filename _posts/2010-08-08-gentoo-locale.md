@@ -2,8 +2,8 @@
 layout: post
 title: gentoo 中文化指南
 description: 关于安装gentoo操作系统之后中文化的一些经验和方法。
-categories: Linux
-tags: gentoo chinese
+categories: signifox
+tags: signifox
 ---
 
 ###1.设置locale

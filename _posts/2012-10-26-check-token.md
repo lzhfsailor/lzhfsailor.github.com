@@ -2,8 +2,8 @@
 layout: post
 title: CheckToken
 description: 一个小小的C代码，检查基本功。
-categories: Programming
-tags:  c/cpp 
+categories: signifox
+tags:  signifox 
 ---
 
 
