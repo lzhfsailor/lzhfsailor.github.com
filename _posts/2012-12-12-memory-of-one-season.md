@@ -7,7 +7,7 @@ tags: 心情随笔
 ---
 
 ## .冬季
-![Alt winter](../static/images/blog/2012-12-13.jpg)
+![Alt winter](/static/images/blog/2012-12-13.jpg)
 
 + 这两天，嘴角又起泡了。
 
