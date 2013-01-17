@@ -5,7 +5,6 @@ description: 还君明珠双泪垂
 categories: diary
 tags: 心情随笔
 ---
-##相遇是一场痛
 <hr>
 
 + 将萌芽的种子深深的埋藏

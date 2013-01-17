@@ -6,7 +6,6 @@ categories: Tech
 tags: Tech C# OpenGL
 ---
 
-##C#下OpenGL的配置实用
 1. 安装VS2010，下载csgl.1.4.1.dll文件
 2. 双击csgl.1.4.1.dll \ libinstall內的install.bat安装
 3. 在VS2010中新建一个C#的windows窗体程序
@@ -18,7 +17,7 @@ tags: Tech C# OpenGL
 using System.Collections.Generic;  
 using System.Linq;  
 using System.Text;  
-using CsGL.OpenGL;    
+using CsGL.OpenGL;  
 namespace WindowsFormsApplication2{  
     class MyOpenGL : OpenGLControl{  
         public override void glDraw(){  
@@ -45,9 +44,9 @@ namespace WindowsFormsApplication2{
 + 右击Form1.cs，选择查看代码
 + 添加代码如下：
 > ` public Form1(){  
-            Text = "My First OpenGL!";  
-            view.Dock = DockStyle.Fill;  
-            Controls.Add(view);  
-            InitializeComponent();}  
-        MypenGL opGL = new MypenGL();`
+    Text = "My First OpenGL!";  
+    view.Dock = DockStyle.Fill;  
+    Controls.Add(view);  
+    InitializeComponent();}  
+    MypenGL opGL = new MypenGL();`
 
