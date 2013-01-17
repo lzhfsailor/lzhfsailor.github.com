@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C#下OpenGL的配置实用
+title: C#下OpenGL的配置实例
 description: C#下OpenGL的配置实用,VS2010
 categories: Tech
 tags: Tech C# OpenGL
