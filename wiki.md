@@ -7,10 +7,10 @@ title: Wiki List
 
 ##博弈论
 
-* [囚徒困境](/PrisonerDilemma/) 
+* [囚徒困境](wiki) 
 
 ##复杂
-* [奥卡姆剃刀](/static/wiki/2013-01-26-C "奥卡姆剃刀")
+* [奥卡姆剃刀](/wiki)
 #**编程**
 
 ##编程语言
