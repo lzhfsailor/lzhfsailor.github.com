@@ -2,6 +2,18 @@
 layout: default
 ---
 <link rel="stylesheet" href="/js/prettify/prettify.css" />
+
+<style type="text/css">
+
+#menuIndex {position:fixed;top:60px;right:20px;width:200px;overflow:auto}
+#menuIndex a {display:block}
+#menuIndex a:hover {text-decoration:none;}
+#menuIndex ul li{font-size:12px;margin-bottom:5px;word-wrap:break-word;padding-left:10px;}
+#menuIndex ul li.on{background-color:#eee}
+#menuIndex li.h1{font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
+#menuIndex li.h3{padding-left:25px;}
+
+</style>
 <div class="entry">
 
     <h1><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
