@@ -8,10 +8,10 @@ title: Wiki List
 ##博弈论
 
 * [囚徒困境](wiki)
-* [囚徒困境](wikiNote/C)
-* [囚徒困境](wikiNote/2013-01-26-C)
-* [囚徒困境](/wikiNote/C)
-* [囚徒困境](/wikiNote/2013-01-26-C)
+* [囚徒2困境](wikiNote/C)
+* [囚徒3困境](wikiNote/2013-01-26-C)
+* [囚徒4困境](/wikiNote/C)
+* [囚徒5困境](/wikiNote/2013-01-26-C)
 
 ##复杂
 
