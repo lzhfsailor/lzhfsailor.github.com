@@ -5,7 +5,7 @@ title: Wiki List
 
 *建立个人wiki是一项浩大的工程，Ramiel的个人wiki刚刚建立，不求全责备，只作为知识管理功能添加Ramiel感兴趣和了解的内容*
 
-#编程
+#**编程**
 
 ##编程语言
 
@@ -45,7 +45,7 @@ title: Wiki List
 * MDA
 * [Ranking](http://www.cnblogs.com/zhengyun_ustc/archive/2010/12/15/amir.html)
 
-#学术研究
+#**学术研究**
 
 ##复杂网络
 
@@ -65,7 +65,7 @@ title: Wiki List
     
 ##时空数据挖掘/处理，位置服务
 
-#操作系统和软件
+#**操作系统和软件**
 
 ##Web
 
@@ -89,7 +89,7 @@ title: Wiki List
 * Linux
 * 字体
 
-#心理学与认知科学
+#**心理学与认知科学**
 
 ##心理学：
 
@@ -106,7 +106,7 @@ title: Wiki List
 
 * [褪墨](http://www.mifengtd.cn/)
 
-#思维科学
+#**思维科学**
 
 ##数学
 
@@ -134,7 +134,7 @@ title: Wiki List
 * 笛卡尔
 * 卢梭
     
-# 其他学科
+# **其他学科**
 
 ##物理
 
