@@ -10,7 +10,7 @@ title: Wiki List
 * [囚徒困境](/PrisonerDilemma/) 
 
 ##复杂
-* [奥卡姆剃刀](/static/images/logo_musicdog.jpg "奥卡姆剃刀")
+* [奥卡姆剃刀](/static/wiki/2013-01-26-C "奥卡姆剃刀")
 #**编程**
 
 ##编程语言
