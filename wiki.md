@@ -3,8 +3,14 @@ layout: wiki
 title: Wiki List
 ---
 
-*建立个人wiki是一项浩大的工程，Ramiel的个人wiki刚刚建立，不求全责备，只作为知识管理功能添加Ramiel感兴趣和了解的内容*
+#**经典理论**
 
+##博弈论
+
+* [囚徒困境](/PrisonerDilemma/) 
+
+##复杂
+* [奥卡姆剃刀](/CSharp/)
 #**编程**
 
 ##编程语言
