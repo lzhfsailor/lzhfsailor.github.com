@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Lisp - Heming·Liang's blog</title>
+		<meta name="description" content="Heming 的个人博客" />
+		<meta name="keywords" content="Hemin" />
+		<meta name="author" content="Hemin" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="stylesheet" type="text/css" media="all" href="/static/css/style.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="/static/css/highlight.css" />
+		<script src="/static/js/jquery.js" type="text/javascript"></script>
+		<!--[if lt IE 9]>
+		<script src="/static/js/html5.js" type="text/javascript"></script>
+		<![endif]-->
+		<meta name="generator" content="jekyll" />
+	</head>
+	<body itemscope itemtype="http://schema.org/WebPage" class="home blog lost index">
+		<section class="lost-logo fn-clear">
+		<span class="alignleft">
+  			<img class="violet-logo" src="/static/images/logo_musicdog.jpg"/>
+			<hgroup class="violet-site">	
+        		<h1><a href="/" ret="bootmark">worldhello</a><span>.tk</span></h1>
+        		<h2>Life was like a box of chocolates. </h2>
+     		</hgroup><!-- //violet-site -->	
+		</span>
+		<span class="alignright">
+  			<span><a href="/" title="首页" ret="bootmark"><i class="icon-home"></i>首页</a></span>
+  			<span><a href="/archives.html" ret="bootmark">归档</a></span>
+  			<span><a href="/categories.html" ret="bootmark">分类</a></span>
+  			<span><a href="/tags.html" ret="bootmark">标签</a></span>
+			<span><a href="/wiki" ret="bootmark">Wiki</a></span>
+  			<span><a href="/about.html" ret="bootmark">关于</a></span>
+			
+		</span>
+		</section>
+
+		<h1 class="lost-pagetit">Lisp</h1>
+
+<article itemscope itemtype="http://schema.org/Article" class="lost-post">
+<h2>Scheme</h2>
+
+<h3>简介</h3>
+
+<p>Scheme 是一个多范式的程序语言。它是 Lisp 的两个主要方言之一（另一个是 Common Lisp）；它以支持函数式编程为人们所知。它由 Guy L. Steele 和 Gerald Jay Sussman 于1970年代开发而成，通过一系列的论文被引入学术界，现在那些论文被称为 Sussman and Steele's Lambda Papers。至今，Scheme 有两个标准存在，一个是 美电工协会（IEEE）标准，另一个是（事实上更被广为接受的）叫做 RnRS 标准 （Revision n Report on the Algorithmic Language Scheme），n 是版本号。被大多数实现支持的标准是 R5RS 和 R6RS。</p>
+
+<p>Scheme 的设计哲学是最小极简主义。它只提供必须的少数几个原语，所有其他的实用功能都由库来实现。</p>
+
+<p>Scheme 是第一个采用 lexical scope 和要求其实现支持尾递归的 Lisp 方言，它也是最早支持 first-class continuations 的程序语言之一。</p>
+
+<h3>实现</h3>
+
+<pre><code>PLT-Scheme (改名为Racket)
+Gnu Guile
+Bigloo
+Gauche
+Gambit-C
+Chicken Scheme
+MIT-Scheme
+Ikarus
+Scsh
+Stalin
+Scheme48
+Chibi-scheme
+STKlos
+SCM
+</code></pre>
+
+<h3>库</h3>
+
+<pre><code>SRFI
+Slib
+</code></pre>
+
+<h3>学习</h3>
+
+<pre><code>《How to Design Programs》 使用Racket来教导没有编程基础的人程序设计的基本概念，简称HTDP
+《Structure and Interpretation of Computer Programs》 SICP，MIT经典课程，比HTDP难一些
+</code></pre>
+
+<h2>Common Lisp</h2>
+
+<h3>简介</h3>
+
+<p>Common Lisp是一个多范式的通用程序语言，它同时支持过程式，函数式和面向对象式等多种编程风格。它有强大的 宏，能够在编译的不同时期被调用。它能在运行时重编译部分程序而无须重新启动，从而使得渐进式的软件开发变得容易。</p>
+
+<p>Common Lisp有一套工业标准，叫ANSI CL。</p>
+
+<h3>各种实现</h3>
+
+<p>Common Lisp有许多实现，其中开源实现 SBCL, ClozureCL, CLisp 和商业实现 Lispworks, AllegroCL 的应用最为广泛。</p>
+
+<h3>开源实现列表：</h3>
+
+<pre><code>SBCL
+ClozureCL
+CLisp
+CMUCL
+ECL
+ABCL
+</code></pre>
+
+<h3>商业实现列表：</h3>
+
+<pre><code>Lispworks
+AllegroCL
+</code></pre>
+
+<h3>开发环境</h3>
+
+<p>SLIME + Emacs 是最为流行的开发环境。</p>
+
+<h3>入门教程</h3>
+
+<pre><code>lisp入门教程.pdf
+web框架——weblocks 
+Google Common Lisp 风格指南 模式意味著“我的语言不够用了。” — Rich Hickey
+</code></pre>
+
+<h2>其他资源</h2>
+
+<ul>
+<li><p><a href="http://daiyuwen.freeshell.org/gb/rol/roots_of_lisp.html">Lisp之根源</a></p></li>
+<li><p>The roots of Lisp</p></li>
+<li>On Lisp (Paul Graham)</li>
+<li>Practical Common Lisp (Peter Seibel)</li>
+<li>Land of Lisp (Conrad Barski)</li>
+<li>Common Lisp the Language (2nd Edition)</li>
+<li>Paradigms of Artificial Intelligence Programming (Peter Norvig)</li>
+<li>Let Over Lambda (Doug Hoyte)</li>
+<li>The Art of the Metaobject Protocol (Gregor Kiczales)</li>
+<li>The Scheme Programming Language (R. Kent Dybvig)</li>
+</ul>
+
+
+</article>
+<p class="lost-pagebtn">
+<i class="icon-calendar"></i> &nbsp;
+<i class="icon-cogs"></i>
+
+&nbsp;&nbsp;
+<i class="icon-tags"></i>
+
+<p class="lost-anno">
+  声明: 本文采用 
+  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="自由转载-非商用-非衍生-保持署名">BY-NC-SA</a> 
+  授权。转载请注明转自: 
+  <a href="/wikiNote/2013-03-24-Lisp.html" title="Lisp" rel="nofollow">Heming</a>
+</p>
+<section class="fn-clear">
+  <h2>Related Posts:</h2>
+  <ul>
+  
+  </ul>
+</section>
+
+<section class="lost-nextpage fn-clear">
+      
+      
+</section>
+<hr/>
+<section class="lost-disqus fn-clear" itemscope itemtype="http://schema.org/Comment">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+     var disqus_shortname = 'shawhu'; 
+     (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+		<footer class="lost-footer">
+		<div>
+    		<hr/>
+    		<span class="alignleft">
+       		<a href="/" title="Heming·Liang's blog"><i class="icon-home"></i>首页</a> &brvbar; 
+      	 	<a href="/atom.xml"><i class="icon-rss"></i>RSS 订阅</a> &brvbar; 
+    		</span>
+    		<span class="alignright">Copyright &copy <a href="/about.html">Heming·Liang </a>| Powered by <a href="https://github.com/mojombo/jekyll">Jekyll </span>
+		</div>
+		</footer>
+		<script src="/static/js/jquery.scrollTo.js" type="text/javascript"></script>
+		<script src="/static/js/Lost.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-34850864-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	 })();
+</script>
+
+		<a href="http://github.com/lzhfsailor"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+	</body>
+</html>

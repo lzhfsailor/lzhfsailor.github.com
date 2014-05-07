@@ -1,102 +1,81 @@
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<title>Our Love Story</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<style type="text/css">
-		@font-face {
-			font-family: digit;
-			src: url('digital-7_mono.ttf') format("truetype");
-		}
-	</style>
-	<link href="css/default.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/garden.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
-</head>
+---
+layout: default
+title: Home
+---
 
-<body>
-	<div id="mainDiv">
-		<div id="content">
-			<div id="code">
-				<span class="comments">/**</span><br />
-				<span class="space"/><span class="comments">* We are both postgraduate of UJN and programmers,</span><br />
-				<span class="space"/><span class="comments">* so I write some code to celebrate our 1st anniversary.</span><br />
-				<span class="space"/><span class="comments">*/</span><br />
-				Boy i = <span class="keyword">new</span> Boy(<span class="string">"BenDanFeng"</span>);<br />
-				Girl u = <span class="keyword">new</span> Girl(<span class="string">"BaoBeiNa"</span>);<br />
-				<span class="comments">// Mar. 30, 2013, I told you I love you. </span><br />
-				i.love(u);<br />
-				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
-				u.accepted();<br />
-				<span class="comments">// Since then, I miss u every day.</span><br />
-				i.miss(u);<br />
-				<span class="comments">// And take care of u and our love.</span><br />
-				i.takeCareOf(u);<br />
-				<span class="comments">// You say that you won't be so easy to marry me.</span><br />
-				<span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
-				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
-				<span class="keyword">while</span> (isHesitate) {<br />
-				<span class="placeholder"/>i.waitFor(u);<br />
-				<span class="placeholder"/><span class="comments">// I think it is an important decision</span><br />
-				<span class="placeholder"/><span class="comments">// and you should think it over.</span><br />
-				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
-				}<br />
-				<span class="comments">// After a romantic wedding, we will live happily ever after.</span><br />
-				i.marry(u);<br />
-				i.liveHappilyWith(u);<br />
-			</div>
-			<div id="loveHeart">
-				<canvas id="garden"></canvas>
-				<div id="words">
-					<div id="messages">
-						Nana, I have fallen in love with you for
-						<div id="elapseClock"></div>
-					</div>
-					<div id="loveu">
-						Love u forever and ever.<br/>
-						<div class="signature">- Heming.Liang</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="copyright">
-			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br />
-			Copyright © 2013 <a href='http://www.liangzhifeng.com.cn/index1.html'>Heming.liang</a> 2013-2113
-		</div>
-	</div>
-	<script type="text/javascript">
-		var offsetX = $("#loveHeart").width() / 2;
-		var offsetY = $("#loveHeart").height() / 2 - 55;
-		var together = new Date();
-		together.setFullYear(2013, 03, 30);
-		together.setHours(23);
-		together.setMinutes(0);
-		together.setSeconds(0);
-		together.setMilliseconds(0);
-		
-		if (!document.createElement('canvas').getContext) {
-			var msg = document.createElement("div");
-			msg.id = "errorMsg";
-			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-			document.body.appendChild(msg);
-			$("#code").css("display", "none")
-			$("#copyright").css("position", "absolute");
-			$("#copyright").css("bottom", "10px");
-		    document.execCommand("stop");
-		} else {
-			setTimeout(function () {
-				startHeartAnimation();
-			}, 5000);
-
-			timeElapse(together);
-			setInterval(function () {
-				timeElapse(together);
-			}, 500);
-
-			adjustCodePosition();
-			$("#code").typewriter();
-		}
-	</script>
-</body>
-</html>
+<div class="main-index fn-clear">
+	{% for post in paginator.posts %}
+	<article class="main-excerpt fn-clear">
+	<h4 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h4>
+	<p class="date">
+	<i class="icon-calendar"></i>{{  post.date| date: "%B %e,%Y"  }} &nbsp;
+    <i class="icon-cogs"></i>
+    {% for cat in post.categories %} 
+    <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
+    {% endfor %}
+    &nbsp;&nbsp;
+    <i class="icon-tags"></i>
+    {% for tag in post.tags %}
+    <a href="/tags.html#{{ tag }}-ref" title="{{ tag }}" rel="tag">{{ tag }} &nbsp;</a>
+    {% endfor %}
+    </p>
+	<p>{{ post.description }}</p>
+	<p class="more"><a href="{{ post.url }}" title="阅读更多" rel="nofollow"><span>&#10149;</span>阅读更多</a></p>
+	</article>
+	{% endfor %}
+	<nav class="pagination fn-clear">
+	{% if paginator.previous_page %}
+	{% if paginator.previous_page == 1 %}
+	<span class="page">&lt;<a href="/">前页</a></span>
+	{% else %}
+	<span class="page">&lt;<a href="/page{{paginator.previous_page}}">前页</a></span>
+	{% endif %}
+	{% else %}
+	<span class="page">&lt;前页</span>
+	{% endif %}
+	{% if paginator.page == 1 %}
+	<span class="currentitem"><a href="/">1</a></span>
+	{% else %}
+	<span class="pageitem"><a href="/">1</a></span>
+	{% endif %}
+	{% for count in (2..paginator.total_pages) %}
+	{% if count == paginator.page %}
+	<span class="currentitem"><a href="/page{{count}}">{{count}}</a></span>
+	{% else %}
+	<span class="pageitem"><a href="/page{{count}}">{{count}}</a></span>
+	{% endif %}
+	{% endfor %}
+	{% if paginator.next_page %}
+	<span class="page"><a class="next" href="/page{{paginator.next_page}}">后页</a>&gt;</span>
+	{% else %}
+	<span class="page" >后页&gt;</span>
+	{% endif %}
+	<span class="page">(共{{ paginator.total_posts }}篇)</span>
+	</nav>
+</div>
+<hr/>
+<section class="lost-double fn-clear">
+<article class="article article-first">
+<h3>最新文章</h3>
+<ul>
+	{% for post in site.posts limit: 4 %}
+	<li><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
+</article>
+<article class="article article-last">
+<h3>友情链接</h3>
+<ul>
+	<li>人类
+	<ul>
+		<li><a href="http://shawhu.org">signifox</a>&nbsp;中科院师兄</li>
+	</ul>
+	</li>
+	<li>良心
+	<ul>
+		<li><a href="http://www.cplusplus.com/reference">CPP参考</a></li>
+	</ul>
+	</li>
+</ul>
+</article>
+</section>
