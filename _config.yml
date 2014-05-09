@@ -1,9 +1,0 @@
-root: /
-permalink: /:year-:month/:title/
-markdown: rdiscount
-pygments: true
-paginate: 5
-
-title: Heming·Liang's blog
-author: Zhifeng·Liang
-email: "liangzhf@gmail.com"
