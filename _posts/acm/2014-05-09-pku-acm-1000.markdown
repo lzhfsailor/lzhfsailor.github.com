@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "北大ACM题库1000（问题A+B）"
+date:   2014-05-09 10:47:17  
+categories: acm
+description: 北大ACM题库1000（问题A+B）Java语言实现
+
+---
+北大ACM题库1001（问题A+B）
+# 问题描述 #
+
+----------
++ 计算a加b
++ input: 两个整数a和b，其中0≤a, b≤10; Sample: 1 2
++ output: 输出a与b的和; Sample: 3
++ 采用Java语言编程实现
++ 代码同步到github上：[粒子群优化求函数最大值](https://github.com/lzhfsailor/EAs/tree/master/EAs/src/simplePSO "粒子群优化求函数最大值")
+
+# 程序实现 #
+
+----------
+<input type=image  value=show&hide src="/images/hide.ico"  width ="20" height="20" onclick=display(codeHide)> 单击隐藏或显示代码
+<div id=codeHide>
+{% highlight java %}
+package problem1000_1020.acm.pku;
+
+import java.util.Scanner;
+
+public class P1000_ABplus {
+	public static void main(String[] args) {		
+		  Scanner cin=new Scanner(System.in);
+          int a=cin.nextInt(),b=cin.nextInt(),c=cin.nextInt(),d=cin.nextInt();
+          System.out.println(a+d);
+	}
+}
+
+{% endhighlight %}
+</div>
+----------
+# 结果分析 #
+Scanner是SDK1.5新增的一个类,可使用该类创建一个对象:
+
+    Scanner reader=new Scanner(System.in);
+
+然后reader对象调用下列方法(函数),读取用户在命令行输入的各种数据类型:
+
+    nextByte(),nextDouble(),nextFloat,nextInt(),nextLine(),nextLong(),nextShot()
+
+上述方法执行时都会造成堵塞,等待用户在命令行输入数据回车确认.例如,拥护在键盘输入
+12.34,hasNextFloat()的值是true,而hasNextInt()的值是false. 
+NextLine()等待用户输入一个文本行并且回车,该方法得到一个String类型的数据。<br>
+分析另外一段代码,假如输入三个数
+{% highlight java %}
+Scanner cin=new Scanner(System.in);
+while (cin.hasNextInt()) {
+   int a = cin.nextInt();
+   int b = cin.nextInt();
+   System.out.println(a + b);
+}
+{% endhighlight %}
+以上程序有点意思：
+cin.hasNextInt()阻塞等待输入，假如输入为int型数据，那么程序不会结束，一直等待输入。例如：输入1 2 3 4，输出3 7，输出后程序继续等待输入，假如继续输入一个5,5赋值到a,输入流没有数据，b阻塞等待。所以只能继续输入。

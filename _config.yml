@@ -1,0 +1,8 @@
+name: Heming·Liang's blog
+markdown: redcarpet
+pygments: true
+paginate: 5
+
+title: Heming·Liang's blog
+author: Zhifeng·Liang
+email: "liangzhf@gmail.com"

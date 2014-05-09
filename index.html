@@ -1,0 +1,73 @@
+---
+layout: default
+title: Heming.Liang's Homepage
+---
+
+<div class="main-index fn-clear">
+	{% for post in paginator.posts %}
+	<article class="main-excerpt fn-clear">
+	<h4 class="article article-first"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h4>
+	<p class="date">
+	<i class="icon-calendar"></i>{{  post.date| date: "%B %e,%Y"  }} &nbsp;
+    <i class="icon-cogs"></i>
+    {% for cat in post.categories %} 
+    <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
+    {% endfor %}
+    &nbsp;&nbsp;
+    <i class="icon-tags"></i>
+    </p>
+	<p>{{ post.description }}</p>
+	<p class="more"><a href="{{ post.url }}" title="阅读更多" rel="nofollow"><span>&#10149;</span>阅读更多</a></p>
+	</article>
+	{% endfor %}
+<nav class="pagination fn-clear">
+	{% if paginator.previous_page %}
+	{% if paginator.previous_page == 1 %}
+	<span class="page">&lt;<a href="/">前页</a></span>
+	{% else %}
+	<span class="page">&lt;<a href="/page{{paginator.previous_page}}">前页</a></span>
+	{% endif %}
+	{% else %}
+	<span class="page">&lt;前页</span>
+	{% endif %}
+	{% if paginator.page == 1 %}
+	<span class="currentitem"><a href="/">1</a></span>
+	{% else %}
+	<span class="pageitem"><a href="/">1</a></span>
+	{% endif %}
+	{% for count in (2..paginator.total_pages) %}
+	{% if count == paginator.page %}
+	<span class="currentitem"><a href="/page{{count}}">{{count}}</a></span>
+	{% else %}
+	<span class="pageitem"><a href="/page{{count}}">{{count}}</a></span>
+	{% endif %}
+	{% endfor %}
+	{% if paginator.next_page %}
+	<span class="page"><a class="next" href="/page{{paginator.next_page}}">后页</a>&gt;</span>
+	{% else %}
+	<span class="page" >后页&gt;</span>
+	{% endif %}
+	<span class="page">(共{{ paginator.total_posts }}篇)</span>
+	</nav>	
+</div>
+<hr/>
+<section class="lost-double fn-clear">
+<article class="article article-first">
+<h3>技术博客</h3>
+<ul>
+	{% for post in site.categories.tech limit: 4 %}
+	<li><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
+<p class="more"><a href="/tech.html" title="阅读更多" rel="nofollow"><span>&#10149;</span>阅读更多</a></p>
+</article>
+<article class="article article-last">
+<h3>生活随笔</h3>
+<ul>
+	{% for post in site.categories.blog limit: 4 %}
+	<li><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
+<p class="more"><a href="/tech.html" title="阅读更多" rel="nofollow"><span>&#10149;</span>阅读更多</a></p>
+</article>
+</section>
