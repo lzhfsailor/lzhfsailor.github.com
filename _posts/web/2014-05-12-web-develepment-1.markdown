@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "WEB前端开发学习第一天：notpad plus plus + emmet高效率开发环境搭建"
-date:   2014-04-30 15:45:15
+date:   2014-05-12 18:52:00
 categories: web
 description: WEB前端开发学习第一天：介绍notpad++及其插件emmet高效率开发环境搭建，emmet安装使用过程中碰到的问题
 
@@ -25,7 +25,7 @@ description: WEB前端开发学习第一天：介绍notpad++及其插件emmet高
 - DIV及列表自动生成
 	- #page>div.logo+ul#navigation>li*5>a{Item $}
 - 具体动态图如下
-	> ![html5](pic\emmet.gif)
+	> ![html5](pic/emmet.gif)
 
 --------------
 # 碰到的问题 #
