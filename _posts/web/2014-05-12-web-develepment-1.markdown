@@ -25,7 +25,8 @@ description: WEB前端开发学习第一天：介绍notpad++及其插件emmet高
 - DIV及列表自动生成
 	- #page>div.logo+ul#navigation>li*5>a{Item $}
 - 具体动态图如下
-	> ![html5](/static/images/web/emmet.gif)
+
+![html5](/static/images/web/emmet.gif)
 
 --------------
 # 碰到的问题 #
