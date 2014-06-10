@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Life is like a game"
+title:  "生活如同够级"
 date:   2011-04-26 15:45:15
 categories: blog
+description: 人生如这打牌般，牌好，或者不好，都要用心去努力。
 ---
 # 生活如同够级 #
 人生如这打牌般，牌好，或者不好，都要用心去努力。
