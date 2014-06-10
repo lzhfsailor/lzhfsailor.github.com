@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "IBM面试被虐记(二)"
+date:   2014-06-03 15:45:15
+categories: blog
+description: 稀里糊涂进去二面，再次被虐。生活总会给你来个出其不意，打得你措手不及
+---
+待续……

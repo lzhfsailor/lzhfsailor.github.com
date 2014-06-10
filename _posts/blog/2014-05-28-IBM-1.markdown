@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "IBM面试被虐记"
-date:   2014-05-20 15:45:15
+title:  "IBM面试被虐记(一)"
+date:   2014-05-28 15:45:15
 categories: blog
 description: 成功永远留给有准备的人。
 ---
