@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var Lost = {
         Version: "1.0",
-        Site: "http://shawhu.org"
+        Site: "http://www.liangzhifeng.cn"
     }
     Lost.goTop = {
         nodeName: "J-backTop",
